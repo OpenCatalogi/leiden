@@ -1,0 +1,38 @@
+:export {
+  layerColorInteraction: --web-app-layer-color-interaction;
+  layerColorProcess: --web-app-layer-color-process;
+  layerColorIntegration: --web-app-layer-color-integration;
+  layerColorServices: --web-app-layer-color-services;
+  layerColorData: --web-app-layer-color-data;
+  layerColorUnknown: --web-app-layer-color-unknown;
+  layerColorDisabled: --web-app-color-background-light;
+}
+
+.layerFilter {
+  --utrecht-color-sample-block-size: var(--utrecht-icon-size);
+  --utrecht-color-sample-inline-size: var(--utrecht-icon-size);
+}
+
+.layerFilter[aria-pressed="false"] {
+  opacity: var(--web-app-inactive-opacity);
+}
+
+.ComponentsGrid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ComponentsGrid > :not(:last-child) {
+  margin-block-end: var(--web-app-size-md);
+}
+
+@media only screen and (min-width: 576px) {
+  .ComponentsGrid {
+    display: grid;
+    grid-gap: var(--web-app-size-lg);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ComponentsGrid > :not(:last-child) {
+    margin-block-end: 0;
+  }
+}
